@@ -1,1 +1,1 @@
-Hosts several puzzle solutions writen while learning to use Java.
+Hosts several puzzle solutions written while learning to use Java.
