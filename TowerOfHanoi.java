@@ -8,7 +8,7 @@ class TowerOfHanoi {
         /* holds 3 "towers", each a deque object of ints in decreasing order.
          All ints in towers are unique, and between 0 and nDisk-1 */
 
-    TowerOfHanoi(int nDisk) {
+    TowerOfHanoi(int nDisk) { //initialize tower of hanoi
         this.nDisk = nDisk;
         Deque<Integer> disks = new ArrayDeque<>();
         for (int i = 0; i <nDisk; i++) {
@@ -20,7 +20,7 @@ class TowerOfHanoi {
         this.towers = towers;
     }
 
-    private void printTowers(){
+    public String toString(){
         StringBuilder output = new StringBuilder();
         for(Deque<Integer> tower:this.towers){
             for(Integer item:tower){
@@ -28,18 +28,18 @@ class TowerOfHanoi {
             for(int i = tower.size(); i<this.nDisk;i++){
                 output.append("  ");}
             output.append("|");}
-        System.out.println(output);}
+        return output.toString();}
 
 
     void play(int n, int source, int target) {
         if (n == 1) {
             towers.get(target).addLast(towers.get(source).pollLast());
-            this.printTowers();
+            System.out.println(this);
         } else {
             int aux = 3 - (source + target);
             this.play(n - 1, source, aux);
             towers.get(target).addLast(towers.get(source).pollLast());
-            this.printTowers();
+            System.out.println(this);
             this.play(n - 1, aux, target);
         }
 
