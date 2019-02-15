@@ -7,7 +7,12 @@ public class Main {
 
         //new TowerOfHanoi(7).play(7,0,2);
 
-        test_overloading.test();
+        //test_overloading.test();
+
+        //TestCasting.test();
+
+        new TestInheritanceAndInterfaces().test();
+
 
     }
 }

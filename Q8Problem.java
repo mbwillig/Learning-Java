@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-class Q8Problem {
+abstract class Q8Problem {
     /* Solves 8 queens recursively by depth first finding arrangements of the numbers 0 through 7
     where no difference between two numbers equals the difference in position*/
     static void nextDigit(ArrayList<Integer> partial){
