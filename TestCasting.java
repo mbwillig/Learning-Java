@@ -2,7 +2,6 @@ import java.util.*;
 
 public class TestCasting {
     static void test(){
-
         ArrayList<Object> l = new ArrayList<>();
         l.add(1);
         l.add(1.2);

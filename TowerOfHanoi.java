@@ -24,7 +24,7 @@ class TowerOfHanoi {
         StringBuilder output = new StringBuilder();
         for(Deque<Integer> tower:this.towers){
             for(Integer item:tower){
-                output.append(item ).append(" ");}
+                output.append(item + " ");}
             for(int i = tower.size(); i<this.nDisk;i++){
                 output.append("  ");}
             output.append("|");}

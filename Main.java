@@ -11,7 +11,9 @@ public class Main {
 
         //TestCasting.test();
 
-        new TestInheritanceAndInterfaces().test();
+        //new TestInheritanceAndInterfaces().test();
+
+        new TestGUI().makeUltramaficRockClassificationGUI();
 
 
     }

@@ -1,3 +1,5 @@
+
+
 class TestInheritanceAndInterfaces {
 
     /*  tests inheritance Phase -> (Solid, Liquid) and an interface (Shiny)*/
