@@ -19,7 +19,7 @@ public class TestGUI implements ActionListener{
       g.setColor(Color.white);
       g.fillRect(0,0,this.getWidth(),this.getHeight());
 
-      //make the cpx - ol - opx triangle
+      //draw the cpx - ol - opx triangle
       g.setColor(Color.black);
       int[] xcoords = new int[]{50, 150, 250, 50};
       int[] ycoords = new int[]{250, 50, 250, 250};
@@ -27,10 +27,15 @@ public class TestGUI implements ActionListener{
         g.drawLine(xcoords[i], ycoords[i], xcoords[i + 1], ycoords[i + 1]);
       }
 
+      //draw the peridotite - pyroxinite boundary
+      g.drawLine(90, 170,210, 170);
+
       // add labels
       g.drawString("cpx",240,260);
       g.drawString("ol",145,40);
       g.drawString("opx",40,260);
+      g.drawString("pyroxenite",125,180);
+      g.drawString("peridotite",125,165);
 
       //draw rock with user input composition normalized to 100
       int cpx = (int) spinners.get(0).getValue();
@@ -59,13 +64,15 @@ public class TestGUI implements ActionListener{
       JSpinner s = new JSpinner(model);
       JLabel l = new JLabel(label);
       l.setLabelFor(s);
+      s.setMaximumSize(new Dimension(100, 40));
       spinners.add(new JSpinner(model));
       rightPanel.add(l);
       rightPanel.add(s);
     }
 
     button.addActionListener(this);
-    rightPanel.add(button);
+    frame.getContentPane().add(BorderLayout.SOUTH,button);
+
     rightPanel.setLayout(new BoxLayout(rightPanel, BoxLayout.Y_AXIS));
 
     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

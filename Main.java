@@ -13,7 +13,11 @@ public class Main {
 
         //new TestInheritanceAndInterfaces().test();
 
-        new TestGUI().makeUltramaficRockClassificationGUI();
+        //new TestGUI().makeUltramaficRockClassificationGUI();
+
+        //PlayWithStreams.test();
+
+        Q8ProblemWithStreams.nextDigit(new ArrayList<>());
 
 
     }

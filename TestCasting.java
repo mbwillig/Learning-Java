@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class TestCasting {
+class TestCasting {
     static void test(){
         ArrayList<Object> l = new ArrayList<>();
         l.add(1);
@@ -8,11 +8,10 @@ public class TestCasting {
         l.add("hi!");
         l.add(false);
 
-        for(int i = 0;i<l.size();i++){
-            System.out.println(l.get(i).getClass());
+        // not allowed:
+        // System.out.println(l.get(1)+1.);
+
+        // allowed:
+        System.out.println(((double) l.get(1))+1.);
         }
-
-
-
     }
-}
